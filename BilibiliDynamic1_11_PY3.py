@@ -171,7 +171,10 @@ if __name__ == '__main__':
     print (TellTime() + "获取数据成功！")
     #print(Bilibili_Key)
     print('总转发用户', Total_count)
-    print (TellTime() + "中奖用户信息：\n")
-    GetLuckyDog()
-    DeleteDatabase()
+    if Total_count == 0:
+        print('没人转发 请黑箱我')
+    else:
+        print (TellTime() + "中奖用户信息：\n")
+        GetLuckyDog()
+        DeleteDatabase()
 
